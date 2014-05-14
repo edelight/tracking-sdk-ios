@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		F5A7CAD91923799D0081460B /* SLTTrackingFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5A7CADA1923799D0081460B /* Build configuration list for PBXAggregateTarget "SLTTrackingFramework" */;
+			buildPhases = (
+				F5A7CADF192379A90081460B /* build_framework.sh */,
+			);
+			dependencies = (
+				F5A7CADE192379A50081460B /* PBXTargetDependency */,
+			);
+			name = SLTTrackingFramework;
+			productName = SLTTrackingFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		F5A7CAB1192378910081460B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CAB0192378910081460B /* Foundation.framework */; };
+		F5A7CAB6192378910081460B /* SLTTracking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5A7CAB5192378910081460B /* SLTTracking.h */; };
+		F5A7CABF192378910081460B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CABE192378910081460B /* XCTest.framework */; };
+		F5A7CAC0192378910081460B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CAB0192378910081460B /* Foundation.framework */; };
+		F5A7CAC5192378910081460B /* libSLTTracking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CAAD192378910081460B /* libSLTTracking.a */; };
+		F5A7CACB192378910081460B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5A7CAC9192378910081460B /* InfoPlist.strings */; };
+		F5A7CACD192378910081460B /* SLTTrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CACC192378910081460B /* SLTTrackingTests.m */; };
+		F5A7CAD7192378F70081460B /* SLTTracking.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAB5192378910081460B /* SLTTracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5A7CAE3192379C90081460B /* SLTTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CAE1192379C90081460B /* SLTTracking.m */; };
+		F5A7CAE619238AC70081460B /* SLTRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAE419238AC70081460B /* SLTRequestHandler.h */; };
+		F5A7CAE719238AC70081460B /* SLTRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CAE519238AC70081460B /* SLTRequestHandler.m */; };
+		F5A7CAED19238CEC0081460B /* SLTHTTPConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAEC19238CEC0081460B /* SLTHTTPConfig.h */; };
+		F5A7CAF019238CFE0081460B /* SLTShopLoveConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAEE19238CFE0081460B /* SLTShopLoveConfig.h */; };
+		F5A7CAF119238CFE0081460B /* SLTShopLoveConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CAEF19238CFE0081460B /* SLTShopLoveConfig.m */; };
+		F5A7CAF51923901A0081460B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CAF41923901A0081460B /* UIKit.framework */; };
+		F5A7CAF8192392880081460B /* UIDevice+SLTDeviceUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAF6192392880081460B /* UIDevice+SLTDeviceUtility.h */; };
+		F5A7CAF9192392880081460B /* UIDevice+SLTDeviceUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CAF7192392880081460B /* UIDevice+SLTDeviceUtility.m */; };
+		F5A7CAFF192395950081460B /* SLTTrackEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CAFE192395950081460B /* SLTTrackEvent.h */; };
+		F5A7CB02192397240081460B /* SLTEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CB00192397240081460B /* SLTEventHandler.h */; };
+		F5A7CB03192397240081460B /* SLTEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CB01192397240081460B /* SLTEventHandler.m */; };
+		F5A7CB06192399750081460B /* SLTRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A7CB04192399750081460B /* SLTRequest.h */; };
+		F5A7CB07192399750081460B /* SLTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7CB05192399750081460B /* SLTRequest.m */; };
+		F5FCDAE51923A88000E4A726 /* NSString+SLTEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FCDAE31923A88000E4A726 /* NSString+SLTEncoding.h */; };
+		F5FCDAE61923A88000E4A726 /* NSString+SLTEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FCDAE41923A88000E4A726 /* NSString+SLTEncoding.m */; };
+		F5FCDAE91923A9DF00E4A726 /* SLTEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FCDAE71923A9DF00E4A726 /* SLTEvent.h */; };
+		F5FCDAEA1923A9DF00E4A726 /* SLTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FCDAE81923A9DF00E4A726 /* SLTEvent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5A7CAC3192378910081460B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A7CAA5192378910081460B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A7CAAC192378910081460B;
+			remoteInfo = SLTTracking;
+		};
+		F5A7CADD192379A50081460B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A7CAA5192378910081460B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A7CAAC192378910081460B;
+			remoteInfo = SLTTracking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5A7CAAB192378910081460B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F5A7CAB6192378910081460B /* SLTTracking.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F5A7CAAD192378910081460B /* libSLTTracking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLTTracking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7CAB0192378910081460B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5A7CAB4192378910081460B /* SLTTracking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLTTracking-Prefix.pch"; sourceTree = "<group>"; };
+		F5A7CAB5192378910081460B /* SLTTracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTTracking.h; sourceTree = "<group>"; };
+		F5A7CABD192378910081460B /* SLTTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLTTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A7CABE192378910081460B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F5A7CAC8192378910081460B /* SLTTrackingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SLTTrackingTests-Info.plist"; sourceTree = "<group>"; };
+		F5A7CACA192378910081460B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5A7CACC192378910081460B /* SLTTrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTTrackingTests.m; sourceTree = "<group>"; };
+		F5A7CAE1192379C90081460B /* SLTTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTTracking.m; sourceTree = "<group>"; };
+		F5A7CAE419238AC70081460B /* SLTRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTRequestHandler.h; sourceTree = "<group>"; };
+		F5A7CAE519238AC70081460B /* SLTRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTRequestHandler.m; sourceTree = "<group>"; };
+		F5A7CAEC19238CEC0081460B /* SLTHTTPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTHTTPConfig.h; sourceTree = "<group>"; };
+		F5A7CAEE19238CFE0081460B /* SLTShopLoveConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTShopLoveConfig.h; sourceTree = "<group>"; };
+		F5A7CAEF19238CFE0081460B /* SLTShopLoveConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTShopLoveConfig.m; sourceTree = "<group>"; };
+		F5A7CAF41923901A0081460B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F5A7CAF6192392880081460B /* UIDevice+SLTDeviceUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SLTDeviceUtility.h"; sourceTree = "<group>"; };
+		F5A7CAF7192392880081460B /* UIDevice+SLTDeviceUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLTDeviceUtility.m"; sourceTree = "<group>"; };
+		F5A7CAFE192395950081460B /* SLTTrackEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTTrackEvent.h; sourceTree = "<group>"; };
+		F5A7CB00192397240081460B /* SLTEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTEventHandler.h; sourceTree = "<group>"; };
+		F5A7CB01192397240081460B /* SLTEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTEventHandler.m; sourceTree = "<group>"; };
+		F5A7CB04192399750081460B /* SLTRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTRequest.h; sourceTree = "<group>"; };
+		F5A7CB05192399750081460B /* SLTRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTRequest.m; sourceTree = "<group>"; };
+		F5FCDAE31923A88000E4A726 /* NSString+SLTEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SLTEncoding.h"; sourceTree = "<group>"; };
+		F5FCDAE41923A88000E4A726 /* NSString+SLTEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SLTEncoding.m"; sourceTree = "<group>"; };
+		F5FCDAE71923A9DF00E4A726 /* SLTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTEvent.h; sourceTree = "<group>"; };
+		F5FCDAE81923A9DF00E4A726 /* SLTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTEvent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5A7CAAA192378910081460B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7CAF51923901A0081460B /* UIKit.framework in Frameworks */,
+				F5A7CAB1192378910081460B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A7CABA192378910081460B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7CAC5192378910081460B /* libSLTTracking.a in Frameworks */,
+				F5A7CABF192378910081460B /* XCTest.framework in Frameworks */,
+				F5A7CAC0192378910081460B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A7CAA4192378910081460B = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAB2192378910081460B /* SLTTracking */,
+				F5A7CAC6192378910081460B /* SLTTrackingTests */,
+				F5A7CAAF192378910081460B /* Frameworks */,
+				F5A7CAAE192378910081460B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5A7CAAE192378910081460B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAAD192378910081460B /* libSLTTracking.a */,
+				F5A7CABD192378910081460B /* SLTTrackingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5A7CAAF192378910081460B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAF41923901A0081460B /* UIKit.framework */,
+				F5A7CAB0192378910081460B /* Foundation.framework */,
+				F5A7CABE192378910081460B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5A7CAB2192378910081460B /* SLTTracking */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAE419238AC70081460B /* SLTRequestHandler.h */,
+				F5A7CAE519238AC70081460B /* SLTRequestHandler.m */,
+				F5A7CAB5192378910081460B /* SLTTracking.h */,
+				F5A7CAE1192379C90081460B /* SLTTracking.m */,
+				F5A7CAEC19238CEC0081460B /* SLTHTTPConfig.h */,
+				F5A7CAFE192395950081460B /* SLTTrackEvent.h */,
+				F5FCDAE71923A9DF00E4A726 /* SLTEvent.h */,
+				F5FCDAE81923A9DF00E4A726 /* SLTEvent.m */,
+				F5A7CAEE19238CFE0081460B /* SLTShopLoveConfig.h */,
+				F5A7CAEF19238CFE0081460B /* SLTShopLoveConfig.m */,
+				F5A7CB00192397240081460B /* SLTEventHandler.h */,
+				F5A7CB01192397240081460B /* SLTEventHandler.m */,
+				F5A7CB04192399750081460B /* SLTRequest.h */,
+				F5A7CB05192399750081460B /* SLTRequest.m */,
+				F5A7CAF6192392880081460B /* UIDevice+SLTDeviceUtility.h */,
+				F5A7CAF7192392880081460B /* UIDevice+SLTDeviceUtility.m */,
+				F5FCDAE31923A88000E4A726 /* NSString+SLTEncoding.h */,
+				F5FCDAE41923A88000E4A726 /* NSString+SLTEncoding.m */,
+				F5A7CAB3192378910081460B /* Supporting Files */,
+			);
+			path = SLTTracking;
+			sourceTree = "<group>";
+		};
+		F5A7CAB3192378910081460B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAB4192378910081460B /* SLTTracking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5A7CAC6192378910081460B /* SLTTrackingTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CACC192378910081460B /* SLTTrackingTests.m */,
+				F5A7CAC7192378910081460B /* Supporting Files */,
+			);
+			path = SLTTrackingTests;
+			sourceTree = "<group>";
+		};
+		F5A7CAC7192378910081460B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7CAC8192378910081460B /* SLTTrackingTests-Info.plist */,
+				F5A7CAC9192378910081460B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F5A7CAD6192378F20081460B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FCDAE51923A88000E4A726 /* NSString+SLTEncoding.h in Headers */,
+				F5A7CAFF192395950081460B /* SLTTrackEvent.h in Headers */,
+				F5A7CAD7192378F70081460B /* SLTTracking.h in Headers */,
+				F5FCDAE91923A9DF00E4A726 /* SLTEvent.h in Headers */,
+				F5A7CB02192397240081460B /* SLTEventHandler.h in Headers */,
+				F5A7CAE619238AC70081460B /* SLTRequestHandler.h in Headers */,
+				F5A7CAED19238CEC0081460B /* SLTHTTPConfig.h in Headers */,
+				F5A7CAF019238CFE0081460B /* SLTShopLoveConfig.h in Headers */,
+				F5A7CB06192399750081460B /* SLTRequest.h in Headers */,
+				F5A7CAF8192392880081460B /* UIDevice+SLTDeviceUtility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F5A7CAAC192378910081460B /* SLTTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A7CAD0192378910081460B /* Build configuration list for PBXNativeTarget "SLTTracking" */;
+			buildPhases = (
+				F5A7CAA9192378910081460B /* Sources */,
+				F5A7CAAA192378910081460B /* Frameworks */,
+				F5A7CAAB192378910081460B /* CopyFiles */,
+				F5A7CAD6192378F20081460B /* Headers */,
+				F5A7CAD8192379760081460B /* prepare_framework.sh */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLTTracking;
+			productName = SLTTracking;
+			productReference = F5A7CAAD192378910081460B /* libSLTTracking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5A7CABC192378910081460B /* SLTTrackingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A7CAD3192378910081460B /* Build configuration list for PBXNativeTarget "SLTTrackingTests" */;
+			buildPhases = (
+				F5A7CAB9192378910081460B /* Sources */,
+				F5A7CABA192378910081460B /* Frameworks */,
+				F5A7CABB192378910081460B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5A7CAC4192378910081460B /* PBXTargetDependency */,
+			);
+			name = SLTTrackingTests;
+			productName = SLTTrackingTests;
+			productReference = F5A7CABD192378910081460B /* SLTTrackingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5A7CAA5192378910081460B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "The Visual Shopping Company GmbH";
+			};
+			buildConfigurationList = F5A7CAA8192378910081460B /* Build configuration list for PBXProject "SLTTracking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5A7CAA4192378910081460B;
+			productRefGroup = F5A7CAAE192378910081460B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5A7CAAC192378910081460B /* SLTTracking */,
+				F5A7CABC192378910081460B /* SLTTrackingTests */,
+				F5A7CAD91923799D0081460B /* SLTTrackingFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5A7CABB192378910081460B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7CACB192378910081460B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F5A7CAD8192379760081460B /* prepare_framework.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = prepare_framework.sh;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		F5A7CADF192379A90081460B /* build_framework.sh */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = build_framework.sh;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5A7CAA9192378910081460B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7CAE719238AC70081460B /* SLTRequestHandler.m in Sources */,
+				F5FCDAE61923A88000E4A726 /* NSString+SLTEncoding.m in Sources */,
+				F5FCDAEA1923A9DF00E4A726 /* SLTEvent.m in Sources */,
+				F5A7CB07192399750081460B /* SLTRequest.m in Sources */,
+				F5A7CB03192397240081460B /* SLTEventHandler.m in Sources */,
+				F5A7CAF119238CFE0081460B /* SLTShopLoveConfig.m in Sources */,
+				F5A7CAF9192392880081460B /* UIDevice+SLTDeviceUtility.m in Sources */,
+				F5A7CAE3192379C90081460B /* SLTTracking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A7CAB9192378910081460B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A7CACD192378910081460B /* SLTTrackingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5A7CAC4192378910081460B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A7CAAC192378910081460B /* SLTTracking */;
+			targetProxy = F5A7CAC3192378910081460B /* PBXContainerItemProxy */;
+		};
+		F5A7CADE192379A50081460B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A7CAAC192378910081460B /* SLTTracking */;
+			targetProxy = F5A7CADD192379A50081460B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5A7CAC9192378910081460B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A7CACA192378910081460B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5A7CACE192378910081460B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		F5A7CACF192378910081460B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5A7CAD1192378910081460B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLTTracking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLTTracking/SLTTracking-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F5A7CAD2192378910081460B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLTTracking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLTTracking/SLTTracking-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F5A7CAD4192378910081460B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLTTracking/SLTTracking-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SLTTrackingTests/SLTTrackingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F5A7CAD5192378910081460B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLTTracking/SLTTracking-Prefix.pch";
+				INFOPLIST_FILE = "SLTTrackingTests/SLTTrackingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		F5A7CADB1923799D0081460B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5A7CADC1923799D0081460B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5A7CAA8192378910081460B /* Build configuration list for PBXProject "SLTTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7CACE192378910081460B /* Debug */,
+				F5A7CACF192378910081460B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A7CAD0192378910081460B /* Build configuration list for PBXNativeTarget "SLTTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7CAD1192378910081460B /* Debug */,
+				F5A7CAD2192378910081460B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A7CAD3192378910081460B /* Build configuration list for PBXNativeTarget "SLTTrackingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7CAD4192378910081460B /* Debug */,
+				F5A7CAD5192378910081460B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A7CADA1923799D0081460B /* Build configuration list for PBXAggregateTarget "SLTTrackingFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A7CADB1923799D0081460B /* Debug */,
+				F5A7CADC1923799D0081460B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5A7CAA5192378910081460B /* Project object */;
+}
