@@ -12,4 +12,6 @@
 
 - (NSString *) slt_platform;
 
+- (NSString *) slt_macAddress;
+
 @end

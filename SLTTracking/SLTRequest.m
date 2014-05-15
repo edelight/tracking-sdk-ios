@@ -8,6 +8,7 @@
 
 #import "SLTRequest.h"
 #import "NSString+SLTEncoding.h"
+#import "SLTLogger.h"
 
 static const NSTimeInterval kRequestTimeout = 60;
 
@@ -32,33 +33,33 @@ static const NSTimeInterval kRequestTimeout = 60;
 
 - (void)main
 {
-  NSMutableURLRequest *request = [self requestForTrackEvent:self.trackEvent];
-  
-  NSLog(@"Handle Request %@, canHandleRequest %i, mainThread %i", request.URL.absoluteString, [NSURLConnection canHandleRequest:request], [NSThread isMainThread]);
-  
-  NSHTTPURLResponse *response = nil;
-  NSError *error = nil;
-  NSData *data = [NSURLConnection sendSynchronousRequest:request
-                                       returningResponse:&response
-                                                   error:&error];
-  
-  // connection error
-  if (error != nil) {
-    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"Event not delivered! %@, %@, %@", responseString, error, [self curlOf: request]);
-    return;
+  @autoreleasepool {
+    
+    NSMutableURLRequest *request = [self requestForTrackEvent:self.trackEvent];
+    
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                         returningResponse:&response
+                                                     error:&error];
+    
+    // connection error
+    if (error != nil) {
+      NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+      [[SLTLogger sharedLogger] error:@"Event not delivered! %@, %@, %@", responseString, error, [self curlOf: request]];
+      return;
+    }
+    
+    // wrong status code
+    if (response.statusCode < 200 || response.statusCode > 299) {
+      NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+      [[SLTLogger sharedLogger] warn:@"Wrong statusCode! Event not delivered! %@, %@", responseString, [self curlOf: request]];
+      return;
+    }
+    
+    // success
+    [[SLTLogger sharedLogger] verbose:@"Event %@ tracked with %i", self.trackEvent, response.statusCode];
   }
-  
-  // wrong status code
-  if (response.statusCode < 200 || response.statusCode > 299) {
-    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"Wrong statusCode! Event not delivered! %@, %@", responseString, [self curlOf: request]);
-    return;
-  }
-  
-  // success
-  NSLog(@"Event tracked %@", request);
-  
   
 }
 
@@ -82,24 +83,23 @@ static const NSTimeInterval kRequestTimeout = 60;
   
   [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
   
-  if([trackEvent trackEventClientSdk]) {
-    [request setValue:[trackEvent trackEventClientSdk] forHTTPHeaderField:@"clientSdk"];
+  if([trackEvent trackEventHeaders] && [trackEvent trackEventHeaders].count) {
+    for (NSString *key in [trackEvent trackEventHeaders]) {
+      NSString *value = [[trackEvent trackEventHeaders] objectForKey:key];
+      [request setValue:value forHTTPHeaderField:key];
+    }
   }
-
-  if([trackEvent trackEventUserAgent]) {
-    [request setValue:[trackEvent trackEventUserAgent] forHTTPHeaderField:@"User-Agent"];
+  
+  if([trackEvent trackEventParameters] && [trackEvent trackEventParameters].count) {
+    NSData *data = [self bodyForParameters:[trackEvent trackEventParameters]];
+    if(data) {
+      [request setHTTPBody:data];
+    }
   }
-
-//  if([trackEvent trackEventParameters]) {
-//    NSData *data = [self bodyForParameters:[trackEvent trackEventParameters]];
-//    NSLog(@"send %@", data);
-//    if(data) {
-//      [request setHTTPBody:data];
-//    }
-//  }
   
   return request;
 }
+
 
 - (NSData *)bodyForParameters:(NSDictionary *)parameters {
   if(!parameters || parameters.count<=0) return nil;
@@ -114,8 +114,7 @@ static const NSTimeInterval kRequestTimeout = 60;
   
   NSString *bodyString = [pairs componentsJoinedByString:@"&"];
   
-  NSData *body = [NSData dataWithBytes:bodyString.UTF8String length:bodyString.length];
-  return body;
+  return [bodyString dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *) curlOf:(NSURLRequest *) request
@@ -128,8 +127,7 @@ static const NSTimeInterval kRequestTimeout = 60;
   
   NSString *data = [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding];
   
-  if (data)
-  {
+  if (data) {
     curlString = [curlString stringByAppendingFormat:@" -d \"%@\"",data];
   }
   

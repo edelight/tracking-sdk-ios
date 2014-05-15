@@ -11,5 +11,6 @@
 @interface NSString (SLTEncoding)
 
 - (NSString *) slt_urlEncode;
+- (NSString *) slt_md5;
 
 @end

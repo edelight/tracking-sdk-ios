@@ -8,6 +8,7 @@
 
 #import "SLTRequestHandler.h"
 #import "SLTRequest.h"
+#import "SLTLogger.h"
 
 static NSString * const kRequestQueueName = @"com.shoplove.requestHandlerQueue";
 
@@ -33,8 +34,22 @@ static NSString * const kRequestQueueName = @"com.shoplove.requestHandlerQueue";
 }
 
 - (void) addTrackEvent:(id<SLTTrackEvent>) trackEvent {
-  SLTRequest *request = [[SLTRequest alloc] initWithBaseUrl:[self.httpConfig baseUrl] andTrackEvent:trackEvent];
-  [self.requestQueue addOperation:request];
+  
+  if([self validateTrackEvent:trackEvent]) {
+    SLTRequest *request = [[SLTRequest alloc] initWithBaseUrl:[self.httpConfig baseUrl] andTrackEvent:trackEvent];
+    [self.requestQueue addOperation:request];
+  }
+}
+
+- (BOOL) validateTrackEvent:(id<SLTTrackEvent>) trackEvent {
+  
+  if([trackEvent trackEventParameters] && [trackEvent trackEventParameters].count) {
+    return YES;
+  }
+  else {
+    [[SLTLogger sharedLogger] warn:@"Not a valid TrackEvent %@", trackEvent];
+    return NO;
+  }
 }
 
 

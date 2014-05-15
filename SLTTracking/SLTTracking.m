@@ -32,7 +32,7 @@ static dispatch_once_t __baseInitializationToken;
   return __sharedEventHandler;
 }
 
-+ (NSString *)appToken {
++ (NSUUID *)appToken {
   return [SLTTracking base].appToken;
 }
 

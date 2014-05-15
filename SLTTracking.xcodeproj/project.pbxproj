@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		F5426D971924AB17002D64D4 /* SLTLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F5426D951924AB17002D64D4 /* SLTLogger.h */; };
+		F5426D981924AB17002D64D4 /* SLTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F5426D961924AB17002D64D4 /* SLTLogger.m */; };
 		F5A7CAB1192378910081460B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CAB0192378910081460B /* Foundation.framework */; };
 		F5A7CAB6192378910081460B /* SLTTracking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F5A7CAB5192378910081460B /* SLTTracking.h */; };
 		F5A7CABF192378910081460B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A7CABE192378910081460B /* XCTest.framework */; };
@@ -81,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F5426D951924AB17002D64D4 /* SLTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTLogger.h; sourceTree = "<group>"; };
+		F5426D961924AB17002D64D4 /* SLTLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTLogger.m; sourceTree = "<group>"; };
 		F5A7CAAD192378910081460B /* libSLTTracking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLTTracking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A7CAB0192378910081460B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5A7CAB4192378910081460B /* SLTTracking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLTTracking-Prefix.pch"; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				F5A7CAF7192392880081460B /* UIDevice+SLTDeviceUtility.m */,
 				F5FCDAE31923A88000E4A726 /* NSString+SLTEncoding.h */,
 				F5FCDAE41923A88000E4A726 /* NSString+SLTEncoding.m */,
+				F5426D951924AB17002D64D4 /* SLTLogger.h */,
+				F5426D961924AB17002D64D4 /* SLTLogger.m */,
 				F5A7CAB3192378910081460B /* Supporting Files */,
 			);
 			path = SLTTracking;
@@ -231,6 +237,7 @@
 				F5A7CAF019238CFE0081460B /* SLTShopLoveConfig.h in Headers */,
 				F5A7CB06192399750081460B /* SLTRequest.h in Headers */,
 				F5A7CAF8192392880081460B /* UIDevice+SLTDeviceUtility.h in Headers */,
+				F5426D971924AB17002D64D4 /* SLTLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +361,7 @@
 				F5FCDAEA1923A9DF00E4A726 /* SLTEvent.m in Sources */,
 				F5A7CB07192399750081460B /* SLTRequest.m in Sources */,
 				F5A7CB03192397240081460B /* SLTEventHandler.m in Sources */,
+				F5426D981924AB17002D64D4 /* SLTLogger.m in Sources */,
 				F5A7CAF119238CFE0081460B /* SLTShopLoveConfig.m in Sources */,
 				F5A7CAF9192392880081460B /* UIDevice+SLTDeviceUtility.m in Sources */,
 				F5A7CAE3192379C90081460B /* SLTTracking.m in Sources */,

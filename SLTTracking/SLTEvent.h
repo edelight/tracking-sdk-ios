@@ -12,13 +12,11 @@
 @interface SLTEvent : NSObject <SLTTrackEvent>
 
 @property (copy) NSString *trackEventPath;
-@property (copy) NSString *trackEventUserAgent;
-@property (copy) NSString *trackEventClientSdk;
+@property (strong) NSDictionary *trackEventHeaders;
 @property (strong) NSDictionary *trackEventParameters;
 
 - (instancetype) initWithPath:(NSString *) path
-                    userAgent:(NSString *) userArgent
-                    clientSdk:(NSString *) clientSdk
+                      headers:(NSDictionary *) headers
                    parameters:(NSDictionary *) params;
 
 @end

@@ -11,26 +11,20 @@
 @implementation SLTEvent
 
 - (instancetype) initWithPath:(NSString *) path
-                    userAgent:(NSString *) userArgent
-                    clientSdk:(NSString *) clientSdk
-                   parameters:(NSDictionary *) params {
+                      headers:(NSDictionary *) headers
+                   parameters:(NSDictionary *) params
+{
   self = [super init];
   if (self) {
     _trackEventPath = path;
-    _trackEventUserAgent = userArgent;
-    _trackEventClientSdk = clientSdk;
+    _trackEventHeaders = headers;
     _trackEventParameters = params;
   }
   return self;
 }
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"[%@:\n\
-          path: %@\n\
-          userAgent: %@\n\
-          clientSdk: %@\n\
-          params: %@]",
-          self.class, self.trackEventPath, self.trackEventUserAgent, self.trackEventClientSdk, self.trackEventParameters];
+  return [NSString stringWithFormat:@"[%@: Path: %@, Headers: %@, Params: %@]", self.class, self.trackEventPath, self.trackEventHeaders, self.trackEventParameters];
 }
 
 @end

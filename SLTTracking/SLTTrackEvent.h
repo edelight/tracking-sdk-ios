@@ -11,8 +11,7 @@
 @protocol SLTTrackEvent <NSObject>
 
 - (NSString *) trackEventPath;
-- (NSString *) trackEventUserAgent;
-- (NSString *) trackEventClientSdk;
+- (NSDictionary *) trackEventHeaders;
 - (NSDictionary *) trackEventParameters;
 
 @end

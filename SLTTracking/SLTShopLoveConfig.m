@@ -36,7 +36,6 @@ static NSString *const kBaseUrl = @"http://api.shoplove.com/v6/trackings";
   NSString *bundeIdentifier = [infoDictionary objectForKey:(NSString *)kCFBundleIdentifierKey];
   NSString *bundleVersion   = [infoDictionary objectForKey:(NSString *)kCFBundleVersionKey];
   
-  
   NSString *userAgent = [NSString stringWithFormat:@"%@/%@ (%@; iOS %@; %@_%@)",
                          bundeIdentifier,
                          bundleVersion,

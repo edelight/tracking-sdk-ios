@@ -12,7 +12,7 @@
 
 + (void)appDidLaunch:(NSString *)appToken;
 
-+ (NSString *)appToken;
++ (NSUUID *)appToken;
 
 + (void) trackInstall;
 

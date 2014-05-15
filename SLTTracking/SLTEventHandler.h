@@ -11,7 +11,7 @@
 
 @interface SLTEventHandler : NSObject
 
-@property (copy, readonly) NSString *appToken;
+@property (copy, readonly) NSUUID *appToken;
 
 - (instancetype)initWithAppToken:(NSString *) appToken;
 
