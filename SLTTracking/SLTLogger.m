@@ -20,7 +20,7 @@ static NSString * const kLogTag = @"ShopLoveTracking";
 
 @implementation SLTLogger
 
-+ (id<SLTLogger>) sharedLogger
++ (SLTLogger *) sharedLogger
 {
   static SLTLogger *sharedInstance = nil;
   static dispatch_once_t onceToken;

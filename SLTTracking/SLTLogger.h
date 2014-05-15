@@ -20,7 +20,9 @@ typedef enum {
 } SLTLogLevel;
 
 
-
+/**
+ *
+ */
 @protocol SLTLogger
 
 - (void)setLogLevel:(SLTLogLevel)logLevel;
@@ -34,9 +36,14 @@ typedef enum {
 
 @end
 
-
+/**
+ *  A basic logger for the ShopLoveTracking Framework.
+ */
 @interface SLTLogger : NSObject <SLTLogger>
 
-+ (id<SLTLogger>) sharedLogger;
+/**
+ *  @return The shared instance of the logger.
+ */
++ (SLTLogger *) sharedLogger;
 
 @end

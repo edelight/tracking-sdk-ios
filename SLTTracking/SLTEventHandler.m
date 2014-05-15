@@ -43,13 +43,15 @@
   return self;
 }
 
-- (void) track:(NSString *) name
+- (void) track:(NSString *) action
 {
-  SLTEvent *event = [[SLTEvent alloc] initWithPath:nil
-                                           headers:[self baseHeaders]
-                                        parameters:@{@"action":name}];
-  
-  [self trackEvent:event];
+  if(action && ![action isEqualToString:@""]) {
+    SLTEvent *event = [[SLTEvent alloc] initWithPath:nil
+                                             headers:[self baseHeaders]
+                                          parameters:@{@"action":action}];
+    
+    [self trackEvent:event];
+  }
 }
 
 - (void) trackEvent:(id<SLTTrackEvent>) trackEvent
@@ -69,14 +71,12 @@
     [headers addEntriesFromDictionary:@{@"ClientSdk" : [self.config clientSdk]}];
   }
   
-  NSString *macAddress = [[UIDevice currentDevice] slt_macAddress];
-  if(macAddress && ![macAddress isEqualToString:@""]) {
-    [headers addEntriesFromDictionary:@{@"MacAddress" : [macAddress slt_md5]}];
+  if([self.config macAddress] && ![[self.config macAddress] isEqualToString:@""]) {
+    [headers addEntriesFromDictionary:@{@"MacAddress" : [self.config macAddress]}];
   }
   
-  NSString *vendorId = [[UIDevice currentDevice].identifierForVendor UUIDString];
-  if(vendorId && ![vendorId isEqualToString:@""]) {
-    [headers addEntriesFromDictionary:@{@"VendorId" : vendorId}];
+  if([self.config vendorId] && ![[self.config vendorId] isEqualToString:@""]) {
+    [headers addEntriesFromDictionary:@{@"VendorId" : [self.config vendorId]}];
   }
 
   if(self.appToken) {

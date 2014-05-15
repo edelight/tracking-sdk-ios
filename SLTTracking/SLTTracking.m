@@ -26,6 +26,8 @@ static dispatch_once_t __baseInitializationToken;
   dispatch_once(&__baseInitializationToken, ^{
     __sharedEventHandler = [[SLTEventHandler alloc] initWithAppToken:appToken];;
   });
+  
+  [SLTTracking trackInstall];
 }
 
 + (SLTEventHandler *) base {
@@ -37,7 +39,7 @@ static dispatch_once_t __baseInitializationToken;
 }
 
 + (void) trackInstall {
-  [[SLTTracking base] track:@"install"];
+  [[SLTTracking base] track:@"install-sdk"];
 }
 
 @end

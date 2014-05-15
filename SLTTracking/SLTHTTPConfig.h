@@ -8,10 +8,45 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  These values are required to setup the ShopLoveTracking Framework.
+ */
 @protocol SLTHTTPConfig <NSObject>
 
+/**
+ *  This value will be used for the User-Agent header field in every POST Request.
+ *
+ *  @return A valid User-Agent.
+ */
 - (NSString *) userAgent;
+
+/**
+ * Represents the base URL for each Request.
+ *
+ *  @return The Url.
+ */
 - (NSString *) baseUrl;
+
+/**
+ *
+ *
+ *  @return The version number of the used SDK.
+ */
 - (NSString *) clientSdk;
+
+/**
+ *  The MAC Address of the device.
+ *
+ *  @return The MAC Address.
+ */
+- (NSString *) macAddress;
+
+/**
+ *  A unique identifier of the device.
+ *  Usually the [[UIDevice currentDevice] identifierForVendor].
+ *
+ *  @return An identifier.
+ */
+- (NSString *) vendorId;
 
 @end

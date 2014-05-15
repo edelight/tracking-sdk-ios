@@ -33,11 +33,15 @@ static NSString * const kRequestQueueName = @"com.shoplove.requestHandlerQueue";
   return self;
 }
 
-- (void) addTrackEvent:(id<SLTTrackEvent>) trackEvent {
+- (BOOL) addTrackEvent:(id<SLTTrackEvent>) trackEvent {
   
   if([self validateTrackEvent:trackEvent]) {
     SLTRequest *request = [[SLTRequest alloc] initWithBaseUrl:[self.httpConfig baseUrl] andTrackEvent:trackEvent];
     [self.requestQueue addOperation:request];
+    return YES;
+  }
+  else {
+    return NO;
   }
 }
 

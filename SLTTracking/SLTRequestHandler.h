@@ -16,6 +16,6 @@
 
 - (instancetype) initWithHTTPConfig:(id<SLTHTTPConfig>) httpConfig;
 
-- (void) addTrackEvent:(id<SLTTrackEvent>) trackEvent;
+- (BOOL) addTrackEvent:(id<SLTTrackEvent>) trackEvent;
 
 @end

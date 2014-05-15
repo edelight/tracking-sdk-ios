@@ -9,9 +9,10 @@
 #import "SLTShopLoveConfig.h"
 #import <UIKit/UIKit.h>
 #import "UIDevice+SLTDeviceUtility.h"
+#import "NSString+SLTEncoding.h"
 
 static NSString *const kSdkVersion = @"1.0.0";
-static NSString *const kBaseUrl = @"http://api.shoplove.com/v6/trackings";
+static NSString *const kBaseUrl = @"https://api.shoplove.com/v6/trackings";
 
 @implementation SLTShopLoveConfig
 
@@ -22,6 +23,8 @@ static NSString *const kBaseUrl = @"http://api.shoplove.com/v6/trackings";
     _baseUrl = kBaseUrl;
     _userAgent = [self createUserAgent];
     _clientSdk = kSdkVersion;
+    _macAddress = [[[UIDevice currentDevice] slt_macAddress] slt_md5];
+    _vendorId = [[UIDevice currentDevice].identifierForVendor UUIDString];
   }
   
   return self;

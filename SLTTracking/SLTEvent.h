@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SLTTrackEvent.h"
 
+/**
+ *  A basic Event conforming to the SLTTrackEvent protocol.
+ */
 @interface SLTEvent : NSObject <SLTTrackEvent>
 
 @property (copy) NSString *trackEventPath;
