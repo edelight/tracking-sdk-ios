@@ -15,11 +15,13 @@ pod 'ShopLoveTracking', :git => 'git://github.com/ShopLove/tracking-sdk-ios.git'
 #### Drag & Drop
 Assuming that you’re developing with Xcode, simply download the latest release from the [releases page][releases] and add the SLTTracking directory to your project.
 
-
+![][dragDrop0]
 
 In the dialog `Choose options for adding these files` make sure to check the
 checkbox to `Copy items into destination group's folder` and select the upper
 radio button to `Create groups for any added folders`.
+
+![][dragDrop1]
 
 
 
@@ -44,7 +46,8 @@ Replace `{YourAppToken}` with your App Token.
 
 [cocoapods]: http://cocoapods.org
 [releases]: https://github.com/ShopLove/tracking-sdk-ios/releases
-
+[dragDrop0]: https://cloud.githubusercontent.com/assets/2537091/2996597/44e2dc88-dcf2-11e3-9649-219bef81f3a9.png
+[dragDrop1]: https://cloud.githubusercontent.com/assets/2537091/2996598/44e39c9a-dcf2-11e3-9ee6-13a8f72997c2.png
 
 
 
