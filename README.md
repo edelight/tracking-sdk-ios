@@ -9,12 +9,17 @@ If you're using [CocoaPods][cocoapods], you can add the following line to your
 `Podfile`
 
 ```ruby
-pod ‘ShopLoveTracking’, :git => 'git://github.com/ShopLove/tracking-sdk-ios.git', :tag => 'v1.0.0’
+pod 'ShopLoveTracking', :git => 'git://github.com/ShopLove/tracking-sdk-ios.git', :tag => 'v1.0.0'
 ```
 
 #### Drag & Drop
 Assuming that you’re developing with Xcode, simply download the latest release from the [releases page][releases] and add the SLTTracking directory to your project.
 
+
+
+In the dialog `Choose options for adding these files` make sure to check the
+checkbox to `Copy items into destination group's folder` and select the upper
+radio button to `Create groups for any added folders`.
 
 
 
@@ -26,7 +31,7 @@ Navigate to your Application Delegate source file and add
 #import "SLTTracking.h"
 ```
 
-at the top of you file. In the -application:didFinishLaunchingWithOptions: or -applicationDidFinishLaunching: method add the following calls to SLTTracking.
+at the top of you file. In the `-application:didFinishLaunchingWithOptions:` or `-applicationDidFinishLaunching:` method add the following calls to SLTTracking.
 
 
 ```objc
