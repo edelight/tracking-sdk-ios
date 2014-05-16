@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ *  The different logger states.
+ */
 typedef enum {
   SLTLogLevelNoLogging  = 0,
   SLTLogLevelVerbose    = 1,
@@ -21,7 +23,7 @@ typedef enum {
 
 
 /**
- *
+ *  Logger objects must conform to this protocol.
  */
 @protocol SLTLogger
 

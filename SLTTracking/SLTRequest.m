@@ -22,7 +22,8 @@ static const NSTimeInterval kRequestTimeout = 60;
 @implementation SLTRequest
 
 
-- (instancetype) initWithBaseUrl:(NSString *) baseUrl andTrackEvent:(id<SLTTrackEvent>) trackEvent {
+- (instancetype) initWithBaseUrl:(NSString *) baseUrl andTrackEvent:(id<SLTTrackEvent>) trackEvent
+{
   self = [super init];
   if (self) {
     _baseUrl = [NSURL URLWithString:baseUrl];
@@ -60,7 +61,6 @@ static const NSTimeInterval kRequestTimeout = 60;
     // success
     [[SLTLogger sharedLogger] verbose:@"Event %@ tracked with %i", self.trackEvent, response.statusCode];
   }
-  
 }
 
 
@@ -101,7 +101,8 @@ static const NSTimeInterval kRequestTimeout = 60;
 }
 
 
-- (NSData *)bodyForParameters:(NSDictionary *)parameters {
+- (NSData *)bodyForParameters:(NSDictionary *)parameters
+{
   if(!parameters || parameters.count<=0) return nil;
   
   NSMutableArray *pairs = [NSMutableArray array];
@@ -116,6 +117,9 @@ static const NSTimeInterval kRequestTimeout = 60;
   
   return [bodyString dataUsingEncoding:NSUTF8StringEncoding];
 }
+
+
+#pragma mark - Utility Methods
 
 - (NSString *) curlOf:(NSURLRequest *) request
 {

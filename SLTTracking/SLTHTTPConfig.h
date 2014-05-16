@@ -30,7 +30,7 @@
 /**
  *
  *
- *  @return The version number of the used SDK.
+ *  @return The version number of the currently used SDK.
  */
 - (NSString *) clientSdk;
 
@@ -45,7 +45,7 @@
  *  A unique identifier of the device.
  *  Usually the [[UIDevice currentDevice] identifierForVendor].
  *
- *  @return An identifier.
+ *  @return The identifier.
  */
 - (NSString *) vendorId;
 

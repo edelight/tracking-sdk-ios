@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Provides some helper methods to get more information of the current device.
+ */
 @interface UIDevice (SLTDeviceUtility)
 
+/**
+ *  @return A string representation of the current device (like iPhone5,1).
+ */
 - (NSString *) slt_platform;
 
+/**
+ *  @return The MAC Address of the device.
+ */
 - (NSString *) slt_macAddress;
 
 @end

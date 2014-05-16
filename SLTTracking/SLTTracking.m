@@ -42,4 +42,9 @@ static dispatch_once_t __baseInitializationToken;
   [[SLTTracking base] track:@"install-sdk"];
 }
 
++ (void) setLogLevel:(SLTLogLevel) logLevel
+{
+  [[SLTLogger sharedLogger] setLogLevel:logLevel];
+}
+
 @end
