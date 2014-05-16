@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = ‘ShopLoveTracking'
+  s.name         = 'ShopLoveTracking'
   s.version      = '1.0.0'
   s.license      =  { :type => 'MIT', :file => 'MIT-LICENSE' }
   s.homepage     = 'http://www.shoplove.com'
